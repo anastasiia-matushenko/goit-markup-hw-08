@@ -1,0 +1,22 @@
+.contacts-info__item {
+    margin-bottom: 9px;
+    line-height: 1.71;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.contacts-info__link {
+    color: var(--footer-text-color);
+    transition: color var(--animation);
+
+    &:hover,
+    &:focus {
+        color: var(--accent-color);
+    }
+}
+
+.contacts-info__location {
+    color: var(--primary-white-color);
+}

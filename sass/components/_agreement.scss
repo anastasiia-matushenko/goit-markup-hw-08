@@ -1,0 +1,48 @@
+.agreement {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.user-data__agreement {
+    margin-bottom: 30px;
+}
+
+.agreement__custom-checkbox {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 15px;
+
+    outline: 2px solid var(--secondary-text-color);
+    outline-offset: -2px;
+    border-radius: 2px;
+    background-color: transparent;
+    transition: background-color var(--animation), outline-color var(--animation);
+
+    .agreement__checkbox:checked + & {
+        outline-color: var(--accent-color);
+        background-color: var(--accent-color);
+    }
+}
+
+.agreement__icon {
+    opacity: 0;
+    fill: var(--primary-white-color);
+    transition: opacity var(--animation);
+
+    .agreement__checkbox:checked + .agreement__custom-checkbox & {
+        opacity: 1;
+    }
+}
+
+.agreement__text {
+    user-select: none;
+    line-height: 1.71;
+}
+
+.agreement__link {
+    color: var(--accent-color);
+}
