@@ -5,11 +5,8 @@
 }
 
 .gallery__item {
+    flex-basis: calc((100% - 0px) / 1);
     transition: box-shadow var(--animation);
-
-    @include mq(mob) {
-        flex-basis: calc((100% - 0px) / 1);
-    }
 
     @include mq(tab) {
         flex-basis: calc((100% - 30px) / 2);

@@ -17,11 +17,8 @@
 }
 
 .portfolio__filter {
-
-    @include mq(mob) {
-        margin-bottom: 40px;
-    }
-
+    margin-bottom: 40px;
+    
     @include mq(tab) {
         margin-bottom: 30px;
     }

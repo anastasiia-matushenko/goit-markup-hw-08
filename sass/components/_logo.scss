@@ -3,10 +3,8 @@
     font-weight: 700;
     color: var(--accent-color);
 
-    @include mq(mob) {
-        font-size: 24px;
-        line-height: 1.17;
-    }
+    font-size: 24px;
+    line-height: 1.17;
 
     @include mq(desk) {
         font-size: 26px;

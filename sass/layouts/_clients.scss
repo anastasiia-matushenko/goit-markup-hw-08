@@ -22,11 +22,8 @@
 }
 
 .clients__item {
+    flex-basis: calc((100% - 30px) / 2);
     height: 92px;
-    
-    @include mq(mob) {
-        flex-basis: calc((100% - 30px) / 2);
-    }
 
     @include mq(tab) {
         flex-basis: calc((100% - 60px) / 3);
