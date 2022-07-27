@@ -4,7 +4,6 @@
     @include mq(desk) {
         @include section(94px, 94px);
     }
-    // @extend %section;
 }
 
 .clients__title {
@@ -16,23 +15,6 @@
     }
 }
 
-// .clients__title {
-    // @include section-title();
-
-    // @include mq(desk) {
-    //     @include section-title(50px, 36px, 1.17, center, var(--secondary-text-color));
-    // }
-    // @extend %section__title;
-    // @extend %title;
-
-    // @include mq(desk) {
-    //     margin-bottom: 50px;
-        
-    //     font-size: 36px;
-    // }
-    // @extend %desk-title;
-// }
-
 .clients__list {
     display: flex;
     flex-wrap: wrap;
@@ -40,8 +22,11 @@
 }
 
 .clients__item {
-    flex-basis: calc((100% - 30px) / 2);
     height: 92px;
+    
+    @include mq(mob) {
+        flex-basis: calc((100% - 30px) / 2);
+    }
 
     @include mq(tab) {
         flex-basis: calc((100% - 60px) / 3);

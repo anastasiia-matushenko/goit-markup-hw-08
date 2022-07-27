@@ -1,7 +1,26 @@
 .header {
     border-bottom: 1px solid #ECECEC;
+
+    @include mq(mob-only) {
+        position: relative;
+    }
 }
 
 .header__container {
     display: flex;
+    align-items: center;
+
+    @include mq(mob-only) {
+        justify-content: space-between;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    @include mq(tab) {
+        gap: 88px;
+    }
+
+    @include mq(desk) {
+        gap: 93px;
+    }  
 }

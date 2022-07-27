@@ -11,20 +11,21 @@
 // components
 @import "./components/container";
 @import "./components/logo";
-// @import "./components/navigation";
-// @import "./components/contacts";
+@import "./components/navigation";
+@import "./components/contacts";
 @import "./components/button";
 @import "./components/socials";
 @import "./components/contacts-info";
 @import "./components/subscribe-form";
-// @import "./components/backdrop";
-// @import "./components/modal";
-// @import "./components/user-data";
-// @import "./components/agreement";
-// @import "./components/btn-close";
+@import "./components/backdrop";
+@import "./components/modal";
+@import "./components/user-data";
+@import "./components/agreement";
+@import "./components/btn-close";
 
 // layouts
-// @import "./layouts/header";
+@import "./layouts/header";
+@import "./layouts/mobile-menu";
 @import "./layouts/hero";
 @import "./layouts/features";
 @import "./layouts/works";

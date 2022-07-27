@@ -1,6 +1,4 @@
 .hero {
-    padding: 118px 0;
-    max-width: 480px;
     margin: 0 auto;
 
     text-align: center;
@@ -10,28 +8,32 @@
     background-size: cover;
     background-position: center;
 
-    // background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
     background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/hero-bg_sm.jpg);
     @include mq(retina) {
-            background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-                url(../images/hero/hero-bg_sm@2x.jpg);
+        background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+            url(../images/hero/hero-bg_sm@2x.jpg);
+    }
+    
+    @include mq(tab) {
+        background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/hero-bg_md.jpg);
+
+        @include mq(retina) {
+            background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/hero-bg_md@2x.jpg);
         }
+    }
     
-        @include mq(tab) {
-            background-image: url(../img/price/price-bg_md.png);
+    @include mq(desk) {
+        background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/hero-bg_lg.jpg);
     
-            @include mq(retina) {
-                background-image: url(../img/price/price-bg_md@2x.png);
-            }
+        @include mq(retina) {
+            background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/hero-bg_lg@2x.jpg);
         }
-    
-        @include mq(desk) {
-            background-image: url(../img/price/price-bg_lg.png);
-    
-            @include mq(retina) {
-                background-image: url(../img/price/price-bg_lg@2x.png);
-            }
-        }
+    }
+
+    @include mq(mob) {
+        padding: 118px 0;
+        max-width: 480px;
+    }
 
     @include mq(tab) {
         max-width: 768px;
@@ -45,7 +47,6 @@
 
 .hero__title {
     margin: 0 auto 30px;
-    max-width: 360px;
 
     font-weight: 900;
     letter-spacing: 0.06em;
@@ -53,8 +54,11 @@
     text-transform: uppercase;
     color: var(--primary-white-color);
 
-    font-size: 26px;
-    line-height: 1.62;
+    @include mq(mob) {
+        max-width: 360px;
+        font-size: 26px;
+        line-height: 1.62;
+    }
 
     @include mq(desk) {
         max-width: 696px;

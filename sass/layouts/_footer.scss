@@ -9,7 +9,6 @@
     @include mq(tab) {
         display: flex;
         flex-wrap: wrap;
-        // align-items: center;
         justify-content: space-around;
     }
 
@@ -21,7 +20,6 @@
 }
 
 .footer__title {
-    // padding-top: 12px;
     margin-bottom: 20px;
 
     font-size: var(--page-text-size);
@@ -35,9 +33,6 @@
     @include mq(mob-only) {
         margin-top: 60px;
     }
-
-    // margin-left: 85px;
-    // margin-left: auto;
 }
 
 
@@ -47,6 +42,4 @@
         width: 100%;
         max-width: 450px;
     }
-    
-    // margin-left: 93px;
 }

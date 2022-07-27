@@ -40,7 +40,15 @@
 
 .agreement__text {
     user-select: none;
-    line-height: 1.71;
+
+    @include mq(not-desk) {
+        font-size: 12px;
+        line-height: 1.17;
+    }
+    
+    @include mq(desk) {
+        line-height: 1.71;
+    }
 }
 
 .agreement__link {

@@ -1,5 +1,4 @@
 .portfolio {
-    // @extend %section;
     @include section();
     
     @include mq(desk) {
@@ -18,7 +17,10 @@
 }
 
 .portfolio__filter {
-    margin-bottom: 40px;
+
+    @include mq(mob) {
+        margin-bottom: 40px;
+    }
 
     @include mq(tab) {
         margin-bottom: 30px;
@@ -27,8 +29,6 @@
     @include mq(desk) {
         margin-bottom: 50px;
     }
-    // margin-bottom: 30px;
-    // margin-bottom: 50px;
 }
 
 .filter__button {

@@ -4,8 +4,6 @@
     @include mq(desk) {
         @include section(94px, 94px);
     }
-    // @extend %section;
-    // padding-bottom: 47px;
 }
 
 .features__list {

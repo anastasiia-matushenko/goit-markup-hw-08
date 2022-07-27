@@ -1,24 +1,40 @@
 .nav {
-    display: flex;
-    align-items: center;
+    @include mq(tab) {
+        display: flex;
+        align-items: center;
+    }   
 }
 
 .nav__list {
     display: flex;
-    margin-left: 93px;
-    gap: 50px;
+
+    @include mq(mob-only) {
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    @include mq(tab) {
+        gap: 50px;
+    }
 }
 
 .nav__link {
     display: block;
-    padding: 32px 0;
-
     font-weight: 500;
-    line-height: 1.14;
     letter-spacing: 0.02em;
     color: var(--secondary-text-color);
 
     transition: color var(--animation);
+
+    @include mq(mob-only) {
+        font-size: 40px;
+        line-height: 1.17;
+    }
+
+    @include mq(tab) {
+        padding: 32px 0;
+        line-height: 1.14;
+    }
 
     &:hover,
     &:focus {
@@ -27,20 +43,23 @@
 }
 
 .nav__link--current {
-    position: relative;
     color: var(--accent-color);
 
-    &::after {
-        content: '';
-        position: absolute;
-        bottom: -1px;
-        left: 0;
+    @include mq(tab) {
+        position: relative;
 
-        display: block;
-        width: 100%;
-        height: 4px;
-        border-radius: 2px;
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 0;
 
-        background-color: var(--accent-color);
+            display: block;
+            width: 100%;
+            height: 4px;
+            border-radius: 2px;
+
+            background-color: var(--accent-color);
+        }
     }
 }
