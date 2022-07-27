@@ -1,11 +1,13 @@
 .works {
-    display: none;
+    @include section(0, 94px);
+
+    @include mq(not-desk) {
+        display: none;
+    }
 
     @include mq(desk) {
         display: block;
-    }
-
-    @include section(0, 94px);
+    }  
 }
 
 .works__title {
